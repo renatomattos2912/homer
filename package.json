@@ -1,0 +1,25 @@
+{
+  "name": "homer",
+  "version": "0.0.1",
+  "description": "Homer is bot for your home.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/renatomattos2912/homer.git"
+  },
+  "keywords": [
+    "bot",
+    "home",
+    "iot",
+    "smart"
+  ],
+  "author": "@renatomattos29",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renatomattos2912/homer/issues"
+  },
+  "homepage": "https://github.com/renatomattos2912/homer#readme"
+}
