@@ -4,6 +4,7 @@ var five = require('johnny-five');
 var board = new five.Board();
 var builder = require('botbuilder');
 var express = require('express');
+var config = require('./config');
 var server = express();
 /*
  App Id: 6dbc8870-1df6-4401-b1f2-f1971e5a6c8f
@@ -33,7 +34,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
 server.post('/api/messages', connector.listen());
 
 // Add global LUIS recognizer to bot
-var model = process.env.model || 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/e98524c2-1a9e-4fbb-b041-e19573c38287?subscription-key=87c29fc48d1c4a4d9ca94ba98e46f66f&verbose=true&q=';
+var model = config.bot.model;
 bot.recognizer(new builder.LuisRecognizer(model));
 
 // Set Alarm dialog
